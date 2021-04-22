@@ -1,4 +1,4 @@
-//go:build !testing && !grocksdb_clean_link
+//go:build external_libs
 
 package grocksdb
 
