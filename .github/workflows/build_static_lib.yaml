@@ -34,7 +34,7 @@ jobs:
   build_linux:
     name: Build Linux
     runs-on: ubuntu-latest
-    container: iotaledger/goreleaser-cgo-cross-compiler:1.20.1
+    container: izuc/goreleaser-cgo-cross-compiler:1.20.1
     needs: create_branch
     steps:
 
@@ -43,7 +43,7 @@ jobs:
       with:
         ref: ${{ needs.create_branch.outputs.branch_name }}
 
-    - run: git config --system --add safe.directory /__w/grocksdb/grocksdb
+    - run: git config --system --add safe.directory /__w/zippdb/zippdb
 
     - name: build-amd64
       run: make libs
@@ -65,7 +65,7 @@ jobs:
   build_windows:
     name: Build Windows
     runs-on: ubuntu-latest
-    container: iotaledger/goreleaser-cgo-cross-compiler:1.20.1
+    container: izuc/goreleaser-cgo-cross-compiler:1.20.1
     needs: create_branch
     steps:
 
@@ -74,7 +74,7 @@ jobs:
       with:
         ref: ${{ needs.create_branch.outputs.branch_name }}
 
-    - run: git config --system --add safe.directory /__w/grocksdb/grocksdb  
+    - run: git config --system --add safe.directory /__w/zippdb/zippdb  
 
     - name: build-win-amd64
       run: make libs

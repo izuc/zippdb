@@ -1,6 +1,6 @@
 //go:build testing && jemalloc
 
-package grocksdb
+package zippdb
 
 // #include "rocksdb/c.h"
 import "C"

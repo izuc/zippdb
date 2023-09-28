@@ -1,7 +1,7 @@
-package grocksdb
+package zippdb
 
 // #include "rocksdb/c.h"
-// #include "grocksdb.h"
+// #include "zippdb.h"
 import "C"
 
 // IndexType specifies the index type that will be used for this table.

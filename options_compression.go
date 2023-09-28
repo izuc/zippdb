@@ -1,4 +1,4 @@
-package grocksdb
+package zippdb
 
 // CompressionOptions represents options for different compression algorithms like Zlib.
 type CompressionOptions struct {

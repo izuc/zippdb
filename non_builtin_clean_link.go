@@ -1,6 +1,6 @@
-//go:build !testing && grocksdb_clean_link
+//go:build !testing && zippdb_clean_link
 
-package grocksdb
+package zippdb
 
 // #cgo LDFLAGS: -lrocksdb -pthread -lstdc++ -ldl
 import "C"

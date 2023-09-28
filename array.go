@@ -1,4 +1,4 @@
-package grocksdb
+package zippdb
 
 // #include "stdlib.h"
 // #include "rocksdb/c.h"

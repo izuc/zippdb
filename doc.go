@@ -1,22 +1,22 @@
 /*
-Package grocksdb provides the ability to create and access RocksDB databases.
+Package zippdb provides the ability to create and access RocksDB databases.
 
-grocksdb.OpenDb opens and creates databases.
+zippdb.OpenDb opens and creates databases.
 
-	bbto := grocksdb.NewDefaultBlockBasedTableOptions()
-	bbto.SetBlockCache(grocksdb.NewLRUCache(3 << 30))
+	bbto := zippdb.NewDefaultBlockBasedTableOptions()
+	bbto.SetBlockCache(zippdb.NewLRUCache(3 << 30))
 
-	opts := grocksdb.NewDefaultOptions()
+	opts := zippdb.NewDefaultOptions()
 	opts.SetBlockBasedTableFactory(bbto)
 	opts.SetCreateIfMissing(true)
 
-	db, err := grocksdb.OpenDb(opts, "/path/to/db")
+	db, err := zippdb.OpenDb(opts, "/path/to/db")
 
 The DB struct returned by OpenDb provides DB.Get, DB.Put, DB.Merge and DB.Delete to modify
 and query the database.
 
-	ro := grocksdb.NewDefaultReadOptions()
-	wo := grocksdb.NewDefaultWriteOptions()
+	ro := zippdb.NewDefaultReadOptions()
+	wo := zippdb.NewDefaultWriteOptions()
 
 	// if ro and wo are not used again, be sure to Close them.
 	err = db.Put(wo, []byte("foo"), []byte("bar"))
@@ -30,7 +30,7 @@ For bulk reads, use an Iterator. If you want to avoid disturbing your live
 traffic while doing the bulk read, be sure to call SetFillCache(false) on the
 ReadOptions you use when creating the Iterator.
 
-	ro := grocksdb.NewDefaultReadOptions()
+	ro := zippdb.NewDefaultReadOptions()
 	ro.SetFillCache(false)
 
 	it := db.NewIterator(ro)
@@ -51,7 +51,7 @@ ReadOptions you use when creating the Iterator.
 Batched, atomic writes can be performed with a WriteBatch and
 DB.Write.
 
-	wb := grocksdb.NewWriteBatch()
+	wb := zippdb.NewWriteBatch()
 	// defer wb.Close or use wb.Clear and reuse.
 	wb.Delete([]byte("foo"))
 
@@ -65,11 +65,11 @@ filter to your database. NewBloomFilter and
 BlockBasedTableOptions.SetFilterPolicy is what you want. NewBloomFilter is
 amount of bits in the filter to use per key in your database.
 
-	filter := grocksdb.NewBloomFilter(10)
-	bbto := grocksdb.NewDefaultBlockBasedTableOptions()
+	filter := zippdb.NewBloomFilter(10)
+	bbto := zippdb.NewDefaultBlockBasedTableOptions()
 	bbto.SetFilterPolicy(filter)
 	opts.SetBlockBasedTableFactory(bbto)
-	db, err := grocksdb.OpenDb(opts, "/path/to/db")
+	db, err := zippdb.OpenDb(opts, "/path/to/db")
 
 If you're using a custom comparator in your code, be aware you may have to
 make your own filter policy object.
@@ -78,4 +78,4 @@ This documentation is not a complete discussion of RocksDB. Please read the
 RocksDB documentation <http://rocksdb.org/> for information on its
 operation. You'll find lots of goodies there.
 */
-package grocksdb
+package zippdb

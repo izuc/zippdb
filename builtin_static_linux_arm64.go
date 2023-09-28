@@ -1,6 +1,6 @@
 //go:build !dynamic
 
-package grocksdb
+package zippdb
 
 // #cgo CFLAGS: -I${SRCDIR}/dist/linux_arm64/include
 // #cgo CXXFLAGS: -I${SRCDIR}/dist/linux_arm64/include

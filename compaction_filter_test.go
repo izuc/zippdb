@@ -1,4 +1,4 @@
-package grocksdb
+package zippdb
 
 import (
 	"bytes"
@@ -56,7 +56,7 @@ type mockCompactionFilter struct {
 	filter func(level int, key, val []byte) (remove bool, newVal []byte)
 }
 
-func (m *mockCompactionFilter) Name() string { return "grocksdb.test" }
+func (m *mockCompactionFilter) Name() string { return "zippdb.test" }
 
 func (m *mockCompactionFilter) Filter(level int, key, val []byte) (bool, []byte) {
 	return m.filter(level, key, val)

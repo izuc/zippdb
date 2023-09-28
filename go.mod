@@ -1,4 +1,4 @@
-module github.com/iotaledger/grocksdb
+module github.com/izuc/zippdb
 
 go 1.19
 

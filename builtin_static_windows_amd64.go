@@ -1,6 +1,6 @@
 //go:build !external_libs
 
-package grocksdb
+package zippdb
 
 // #cgo CFLAGS: -I${SRCDIR}/dist/windows_amd64/include
 // #cgo CXXFLAGS: -I${SRCDIR}/dist/windows_amd64/include
