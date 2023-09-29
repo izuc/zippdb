@@ -1,6 +1,6 @@
 package zippdb
 
-// #include "rocksdb/c.h"
+// #include "zippdb/c.h"
 import "C"
 
 // Cache is a cache used to store data read from data in memory.

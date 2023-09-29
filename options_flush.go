@@ -1,6 +1,6 @@
 package zippdb
 
-// #include "rocksdb/c.h"
+// #include "zippdb/c.h"
 import "C"
 
 // FlushOptions represent all of the available options when manual flushing the

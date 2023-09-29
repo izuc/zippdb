@@ -1,6 +1,6 @@
 package zippdb
 
-// #include "rocksdb/c.h"
+// #include "zippdb/c.h"
 import "C"
 
 // NativeFilterPolicy wraps over rocksdb filter policy.

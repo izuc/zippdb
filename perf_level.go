@@ -1,6 +1,6 @@
 package zippdb
 
-// #include "rocksdb/c.h"
+// #include "zippdb/c.h"
 import "C"
 
 // PerfLevel indicates how much perf stats to collect. Affects perf_context and iostats_context.

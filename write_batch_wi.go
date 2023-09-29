@@ -1,6 +1,6 @@
 package zippdb
 
-// #include "rocksdb/c.h"
+// #include "zippdb/c.h"
 import "C"
 
 // WriteBatchWI is a batching with index of Puts, Merges and Deletes to implement read-your-own-write.

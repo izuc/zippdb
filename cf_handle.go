@@ -1,7 +1,7 @@
 package zippdb
 
 // #include <stdlib.h>
-// #include "rocksdb/c.h"
+// #include "zippdb/c.h"
 import "C"
 
 // ColumnFamilyHandle represents a handle to a ColumnFamily.

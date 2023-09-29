@@ -1,6 +1,6 @@
 package zippdb
 
-// #include "rocksdb/c.h"
+// #include "zippdb/c.h"
 // #include "zippdb.h"
 import "C"
 import "unsafe"

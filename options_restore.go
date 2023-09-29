@@ -1,7 +1,7 @@
 package zippdb
 
 // #include <stdlib.h>
-// #include "rocksdb/c.h"
+// #include "zippdb/c.h"
 import "C"
 
 // RestoreOptions captures the options to be used during

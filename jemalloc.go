@@ -2,7 +2,7 @@
 
 package zippdb
 
-// #include "rocksdb/c.h"
+// #include "zippdb/c.h"
 import "C"
 
 // CreateJemallocNodumpAllocator generates memory allocator which allocates through
